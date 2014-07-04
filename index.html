@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>喜帖</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/xitie.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.jplayer.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="jquery_jplayer"></div>
+    <div class="container custom-container">
+      <div class="row clearfix custom-row" id="content">
+        <div class="col-md-12 column">
+          <div class="row clearfix header-bar row-margin">
+            <div class="col-md-4 column">
+            </div>
+            <div class="col-md-4 column role">
+              <span class="groom-name">罗文剀</span>
+              <span class="loveicon"></span>
+              <span class="bride-name">肖雪蕾</span>
+              <span class="music music-play" id="jquery_jplayer_end"></span>
+            </div>
+            <div class="col-md-4 column"></div>
+          </div>
+        </div>
+        <div class="col-md-12 column content-container">
+          <div class="row clearfix row-margin">
+            <div class="col-md-12 column">
+              <img class="head-img" src="assets/img/image1.jpg" />
+            </div>
+          </div>
+              <div class="dec-box">
+                <div class="dec-title">想说的话</div>
+                <div class="dec-content">
+                  <p>我们结婚了!</p>
+                  <p>一辈子很长,要和有趣的人在一起!</p>
+                </div>
+              </div>
+          <div class="row clearfix button-box row-margin custom-row">
+            <div class="col-md-12 column">
+              <div class="row clearfix">
+                <div class="col-md-12 column button-item wei-images">
+                  <a class="button-link" href="/photo.html">微相册</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row clearfix link-box custom-row">
+            <span class="text-box">公历2014年8月2日</span>
+            <span class="icon-box">
+              <div><i class="fa fa-list-alt fa-2x custom-list"></i></div>
+              <div class="list-text">宴会时间</div>
+            </span>
+          </div>
+          <div class="row clearfix link-box custom-row">
+            <span class="text-box">金牛区蜀西路69号白鸽岛尚11号综合楼-三公尚品酒楼</span>
+            <span class="icon-box">
+              <i class="fa fa-map-marker fa-2x custom-list custom-map"></i>
+              <div class="list-text">宴会地点</div>
+            </span>
+          </div>
+          <div class="row clearfix link-box custom-row">
+            <span class="text-box">18684012271</span>
+            <span class="icon-box">
+              <i class="fa fa-phone fa-2x custom-list"></i>
+              <div class="list-text">接待电话</div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var imgUrl = 'http://pic4.nipic.com/20091218/4005568_184859048784_2.jpg';
+      var lineLink = 'http://xitie.github.com';
+      var descContent = "  罗文剀 肖雪蕾" +"\n" + "  我们结婚啦!";
+      var shareTitle = '喜帖';
+      var appid = 'wx5e6dcc2e2fb003bb';
+
+      function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+          "appid": appid,
+          "img_url": imgUrl,
+          "img_width": "640",
+          "img_height": "640",
+          "link": lineLink,
+          "desc": descContent,
+          "title": shareTitle
+          }, function(res) {
+          _report('send_msg', res.err_msg);
+        })
+      }
+      function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+          "img_url": imgUrl,
+          "img_width": "640",
+          "img_height": "640",
+          "link": lineLink,
+          "desc": descContent,
+          "title": shareTitle
+          }, function(res) {
+          _report('timeline', res.err_msg);
+        });
+      }
+      function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo',{
+          "content": descContent,
+          "url": lineLink,
+          }, function(res) {
+          _report('weibo', res.err_msg);
+        });
+      }
+      // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+      document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+            });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+            });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv){
+            shareWeibo();
+            });
+        }, false);
+      </script>
+  </body>
+</html>

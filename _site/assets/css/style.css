@@ -1,0 +1,226 @@
+html {
+  height: 100% !important;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100% !important;
+}
+
+.cover-page {
+  min-height: 330px;
+  background-color: #A00908;
+}
+
+.slogan {
+  position: absolute;
+  width: 266px;
+  height: 290px;
+  left: 50%;
+  margin-left: -133px;
+  top: 50%;
+  margin-top: -145px;
+}
+
+.head-slogan {
+  background: url("../img/head.png");
+  position: absolute;
+  width: 160px;
+  height: 124px;
+  top: 68px;
+  left: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../img/icons.png') 0 0 no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.custom-row {
+  margin: 0;
+}
+
+.row-margin {
+  margin-bottom: 10px;  
+}
+
+.header-bar {
+  height: 50px;
+  background: url("../img/main.png") repeat-x;
+}
+
+.custom-container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("../img/bg.png") repeat;
+}
+
+#content {
+  height: 100%;
+}
+
+.content-container {
+  background: #fff;
+  max-width: 100%;
+}
+
+.role {
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 2px rgba(124,124,0,.6);
+  position: relative;
+  top: 15px;
+}
+
+.loveicon {
+  width: 16px;
+  height: 16px;
+  background: url("../img/main.png") -70px -280px no-repeat;
+  display: inline-block;
+  margin: auto 6px;
+}
+
+.music {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+}
+
+.music-pause {
+  background: url("../img/main.png") -70px -221px no-repeat;
+}
+
+.music-play {
+  background: url("../img/main.png") -95px -221px no-repeat;
+}
+
+.head-img {
+  width: 100%;
+}
+
+.dec-box {
+  margin-bottom: 10px;
+  background-color: rgb(177, 0, 0);
+
+}
+
+.dec-title {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  padding-top: 3px;
+}
+
+.dec-content {
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.button-box {
+  color: #ff82ab;
+}
+
+.button-item {
+  width: 90px;
+  height: 40px;
+  top: 0;
+  background: url("../img/main.png") -234px -221px no-repeat;
+  line-height: 40px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+}
+
+.wei-images {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.flower {
+  float: left;
+  left: 160px;
+}
+
+.link-box {
+  height: 50px;
+  margin-bottom: 3px;
+  background: #F7E6D2;
+}
+
+.text-box {
+  font-size: 10px;
+  height: 50px;
+  line-height: 50px;
+  color: #000000;
+  padding-left: 5px;
+  float: left;
+}
+
+.icon-box {
+  background: #FF0808;
+  float: right;
+  height: 100%;
+}
+
+.custom-list {
+  color: #fff;
+  padding-left: 13px;
+}
+
+.custom-map {
+  padding-left: 19px;
+}
+
+.custom-icon-box {
+  padding-right: 0;
+}
+
+.list-text {
+  color: #fff;
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.cover-page-height {
+  height: 100%;
+}
+
+.photo-container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f6f6f6;
+}
+
+.img-margin {
+  margin-left: 5px;
+}
